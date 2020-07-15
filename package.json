@@ -1,0 +1,17 @@
+{
+  "name": "tennis-scoring",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node-dev ./playMatch.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "ts-node-dev": "^1.0.0-pre.51"
+  }
+}
