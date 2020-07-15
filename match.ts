@@ -44,22 +44,22 @@ export default class Match {
 
     public score() {
         if (this.tieBreaker && (this.player1.tieBreakerPoints || this.player2.tieBreakerPoints)) {
-            return console.log(`${this.player1.games} - ${this.player2.games}, ${this.player1.tieBreakerPoints} - ${this.player2.tieBreakerPoints}`)
+            return `${this.player1.games} - ${this.player2.games}, ${this.player1.tieBreakerPoints} - ${this.player2.tieBreakerPoints}`
         }
         if (this.deuce) {
             if (!this.player1.advantage && !this.player2.advantage) {
-                return console.log(`${this.player1.games} - ${this.player2.games}, Deuce`)
+                return `${this.player1.games} - ${this.player2.games}, Deuce`
             }
             if (this.player1.advantage) {
-                return console.log(`${this.player1.games} - ${this.player2.games}, Advantage ${this.player1.name}`)
+                return `${this.player1.games} - ${this.player2.games}, Advantage ${this.player1.name}`
             }
-            return console.log(`${this.player1.games} - ${this.player2.games}, Advantage ${this.player2.name}`)
+            return `${this.player1.games} - ${this.player2.games}, Advantage ${this.player2.name}`
         }
 
         if (this.player1.points || this.player2.points) {
-            return console.log(`${this.player1.games} - ${this.player2.games}, ${this.gamePoints[this.player1.points]} - ${this.gamePoints[this.player2.points]}`)
+            return `${this.player1.games} - ${this.player2.games}, ${this.gamePoints[this.player1.points]} - ${this.gamePoints[this.player2.points]}`
         }
-        return console.log(`${this.player1.games} - ${this.player2.games}`)
+        return `${this.player1.games} - ${this.player2.games}`
     }
 
     private addPoint(player: IPlayer, opponent: IPlayer) {
